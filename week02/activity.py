@@ -2,17 +2,19 @@
 What goes here???
 """
 
-# How do you define a function?
+# Define a function called "ask"
 
-# How do you receive input?
+# Prompt a user to answer a question and store the answer in a variable named answer
 
-# How do you print that output to the console?
+# Print the answer to the terminal
+
+# Make a function called "data_types"
 
 # What are the different data types and when do you use them?
 
-# How do you cast a data type to another data type?
+# Cast these variables to strings and print them to the terminal
 
-# How do you call a function?
+# Call your function
 
-# How do you create a main function?
+# Is there a better way to call your funtion?
 
