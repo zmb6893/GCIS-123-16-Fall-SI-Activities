@@ -16,5 +16,5 @@ What goes here???
 
 # Call your function
 
-# Is there a better way to call your funtion?
+# Is there a better way to call your function?
 
