@@ -121,6 +121,13 @@ def add_rock(size, color, x_cor, y_cor):
 
     return
 
+def build_default_scene():
+    add_sky()
+    add_grass()
+    add_cloud(1,10)
+    add_cloud(-400, 100)
+    add_cloud(400, 130)
+
 def main():
     init_scene(SCREEN_SIZE)
     add_sky()
@@ -130,4 +137,5 @@ def main():
     add_cloud(400, 130)
     input("Press enter to exit")
 
-main()
+if __name__ == "__main__":
+    main()

@@ -6,6 +6,9 @@ Shortcut functions for turtle
 
 import turtle as t
 
+# Default values
+SCREEN_SIZE = 1080
+
 def reset_turtle():
     '''
     Resets the turtle to prepare for new drawing
@@ -16,7 +19,7 @@ def reset_turtle():
     t.speed(0)
     t.pencolor("black")
 
-def init_scene(size):
+def init_scene(size = SCREEN_SIZE):
     '''
     Initializes the screen size of the scene to be size by size
 
@@ -25,14 +28,14 @@ def init_scene(size):
     '''
     t.screensize(size, size)
 
-def draw_arc(degrees):
+def draw_arc(degrees, size = 1):
     '''
     Draws an arc with a length of degrees
 
     Parameters:
     :param int degrees: The size and curve of the arc
     '''
-    for increment in range(180):
-        t.forward(1)
+    for increment in range(degrees):
+        t.forward(size)
         t.right(1)
         
