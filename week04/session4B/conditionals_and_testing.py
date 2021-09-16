@@ -14,6 +14,7 @@ def greeter(name):
 
     :return string
     '''
+    return
 
 def c2f(celsius):
     '''
@@ -24,6 +25,7 @@ def c2f(celsius):
     
     :return float
     '''
+    return
 
 def is_odd(n):
     '''
@@ -34,6 +36,7 @@ def is_odd(n):
     
     :return boolean
     '''
+    return
 
 def is_even(n):
     '''
@@ -44,6 +47,7 @@ def is_even(n):
     
     :return boolean
     '''
+    return
 
 def my_max(n1, n2):
     '''
@@ -56,6 +60,11 @@ def my_max(n1, n2):
     :return int
     '''
 
+    if(n1 > n2):
+        return n1
+    else: 
+        return n2
+    
 def av_three(n1, n2, n3):
     '''
     Takes three numbers and returns the average
@@ -67,6 +76,7 @@ def av_three(n1, n2, n3):
     
     :return float
     '''
+    return
 
 def main():
     return
