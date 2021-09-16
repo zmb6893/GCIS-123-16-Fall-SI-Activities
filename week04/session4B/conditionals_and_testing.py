@@ -1,5 +1,5 @@
 """
-Michael's Session: Introducing unit testing, returns, conditionals, TDD, and pytest
+Session 4B: Introducing unit testing, returns, conditionals, TDD, and pytest
 @author: Zoe Bingham
 """
 
@@ -67,3 +67,8 @@ def av_three(n1, n2, n3):
     
     :return float
     '''
+
+def main():
+    return
+
+# How should we call main?
