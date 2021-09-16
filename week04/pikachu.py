@@ -7,14 +7,15 @@ create a suprised pikachu.
 # Initialize static global variables for the colors of pikachu
 BODY_COLOR = "goldenrod1"
 EYE_COLOR = "saddle brown"
-NOSE_COLOR = "s@ddle brown"
+NOSE_COLOR = "saddle brown"
 CHEEK_COLOR = "firebrick1"
-CHEEK_PEN_COLOR = firebrick4
+CHEEK_PEN_COLOR = "firebrick4"
 DEFAULT_PEN_COLOR = "black"
 MOUTH_COLOR = "indianred"
 EAR_TIP_COLOR = "saddle brown"
 
 # Import the turtle library and turtle_utils
+import zoe
 import turtle as t
 import turtle_utils as tu
 from habitat_builder import build_default_scene
@@ -45,7 +46,7 @@ def draw_base(x, y, size):
     t.begin_fill()
     t.circle((size*100) + (size*100) * .25)    
     t.end_fill()
-    tul.reset_turtle()
+    tu.reset_turtle()
 
 def draw_ear(x, y, direction, size):
     '''
@@ -160,7 +161,7 @@ def draw_mouth(x,y,size):
     t.fillcolor(MOUTH_COLOR)
 
     # Draw mouth
-    t.goto(x+(95*size),y+(100*size),5)
+    t.goto(x+(95*size),y+(100*size))
     t.pendown()
     t.begin_fill()
     t.circle(20*size)
@@ -178,7 +179,7 @@ def draw_pikachu(x, y, size):
     # Set pen to up and add max drawing speed
     tu.reset_turtle()
 
-    draw_base(x, 'y', size)
+    draw_base(x, y, size)
     draw_ear(x, y, 110, size)
     draw_ear(x+(100*size), y, 220, size)
     draw_eye(x,y,size)
@@ -188,7 +189,7 @@ def draw_pikachu(x, y, size):
     draw_cheek(x+(100*size),y,size)
     draw_mouth(x,y,size)
     t.right(180)
-    t.cry()
+    zoe.cry()
 
     tu.reset_turtle()
 
