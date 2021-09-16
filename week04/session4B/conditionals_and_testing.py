@@ -1,5 +1,5 @@
 """
-Michael's Session: Introducing unit testing, returns, conditionals, TDD, and pytest
+Session 4B: Introducing unit testing, returns, conditionals, TDD, and pytest 
 @author: Zoe Bingham
 """
 
