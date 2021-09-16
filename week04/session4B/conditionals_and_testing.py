@@ -67,3 +67,8 @@ def av_three(n1, n2, n3):
     
     :return float
     '''
+
+def main():
+    return
+
+# How should we call main?
