@@ -1,12 +1,12 @@
 
-def give_skittle(name, number):
-    print("Giving " + name + " " + str(number) + " skittle(s)...\n")
+def give_cookie(name, number):
+    print("Giving " + name + " " + str(number) + " cookie(s)...\n")
 
 def loop_example():
-    skittles = 4
-    skittles_eaten = 0
-    while skittles_eaten < skittles:
-        give_skittle(input("Who wants a skittle?\n"), 1)
-        skittles_eaten += 1
+    cookies = 32
+    cookies_eaten = 0
+    while cookies_eaten < cookies:
+        give_cookie(input("Who wants a cookie?\n"), 2)
+        cookies_eaten += 2
 
 loop_example()
