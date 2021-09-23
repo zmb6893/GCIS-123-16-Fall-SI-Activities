@@ -12,7 +12,17 @@ def flip_word(word):
     :return string flipped_word: word backwards
     '''
 
-    return
+    count = 0
+    reverse_word = ""
+    for letter in word:
+        # we want the first letter to be at the 
+        # end of the word. How do we do that?
+        reverse_word = reverse_word + word[len(word)-count-1]
+        #count = count + 1
+        count += 1
+
+    return reverse_word
+
 
 def count_by_2(start, end):
     '''
@@ -52,3 +62,9 @@ def subtractraction_loop(start, end, jump):
     :return int loop_count: the number of times the loop ran
     '''
     return
+
+def main():
+    var = flip_word("Robert")
+    print(var)
+
+main()
