@@ -1,5 +1,5 @@
 """
-Session 5B: File Reading activities.
+Session 5B: File Reading activities. In class solutions
 """
 
 def print_line_by_line(filename):
@@ -9,6 +9,7 @@ def print_line_by_line(filename):
     Parameters:
     :param string filename: the name of the file to be opened
     '''
+
 
 def print_character_by_character(filename):
     '''
@@ -34,14 +35,16 @@ def make_text_emoji(filename):
     :param string filename: the name of the file to be opened'''
 
 def main():
+    # These are our files!
     file1 = "data/o_o.txt"
     file2 = "data/who_am_I.txt"
     file3 = "data/huh.txt"
     file4 = "data/hmmm.txt"
-    print_line_by_line(file1)
-    print_character_by_character(file2)
-    print_word_by_word(file3)
-    make_text_emoji(file4)
+
+    #print_line_by_line(file1)
+    #print_character_by_character(file2)
+    #print_word_by_word(file3)
+    #make_text_emoji(file4)
 
 if __name__ == "__main__":
     main()
