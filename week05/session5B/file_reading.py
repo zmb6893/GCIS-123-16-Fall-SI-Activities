@@ -28,7 +28,7 @@ def print_word_by_word(filename):
 
 def make_text_emoji(filename):
     '''
-    Open a file and use each character to make an emoji. (Ex: O becomes (O_O) or P becomes (P_P). You can get more creative too)
+    Open a file and use each character to make an emoji. (Ex: O becomes (O_O) or P becomes (P_P). You can get more creative too). Ignore whitespace
 
     Parameters:
     :param string filename: the name of the file to be opened'''
