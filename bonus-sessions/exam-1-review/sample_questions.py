@@ -2,6 +2,8 @@
 Practicum 1 Review: Functions, Turtle, Testing, Loops, Conditionals
 """ 
 
+# Let's start with making a new github branch! How would we do that?
+
 # Use TDD for these functions
 
 def radians_to_degrees(radians):
