@@ -8,6 +8,8 @@ def hello(name):
 
     Parameters:
     :param string name: a name to greet
+
+    :return string: "Hello, name"
     '''
 
-    return
+    return "Hello, " + name
