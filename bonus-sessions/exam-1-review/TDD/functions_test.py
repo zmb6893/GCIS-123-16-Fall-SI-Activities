@@ -1,5 +1,5 @@
 '''
-Sample code for TDD activity
+Sample code for TDD activity: These are unit tests!
 '''
 
 import functions
