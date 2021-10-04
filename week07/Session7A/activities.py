@@ -2,6 +2,7 @@
 Session 7A: Making arrays,linear search, and timing functions
 """
 import starter_code.arrays as arrays
+import time
 
 def make_even_array(start, end):
     '''
@@ -40,8 +41,19 @@ def linear_search(array, n):
     :param int array: array to be searched
     :param int n: the value to be found
     '''
+    return
+
+def random_array(size, seed):
+    '''
+    Fill an array with random numbers using the passed in seed
+
+    Parameters:
+    :param int size: size of the array
+    :param int seed: seed for random
+    '''
+    return
 
 def main():
-    print()
-    
+    print(time.perf_counter())
+
 main()
