@@ -5,6 +5,19 @@ Session 7B: Recursion activities
 import turtle as t
 import random as r
 
+def fibonacci(n):
+    '''
+    Example from the recursion box
+    '''
+    if (n == 0):
+        return 0
+    if n == 1 or n == 2:
+        return 1
+
+    # return the sum of the previous two numbers
+    return fibonacci(n-1) + fibonacci(n-2)
+
+
 def add_to_previous(start, depth):
     '''
     Implement a function that continues to add it's previous value until the specified depth is reached.
@@ -50,7 +63,7 @@ def binary_search(array, n, start, end):
 
 
 def main():
-    draw_flower(1)
+    print(fibonacci(3))
 
 if __name__ == "__main__":
     main()
