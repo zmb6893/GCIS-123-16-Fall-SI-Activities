@@ -3,6 +3,7 @@ Session 7B: Recursion activities
 """
 
 import turtle as t
+import random as r
 
 def add_to_previous(start, depth):
     '''
@@ -16,7 +17,7 @@ def add_to_previous(start, depth):
     :return int
     '''
 
-def draw_tree_branch(size):
+def draw_tree_branch(size, depth):
     '''
     Use turtle to draw a branch recursively.
 
@@ -26,7 +27,7 @@ def draw_tree_branch(size):
 
     return
 
-def draw_flower(size):
+def draw_flower(size, depth):
     '''
     Use turtle to draw a flower recursively
 
@@ -35,9 +36,15 @@ def draw_flower(size):
     '''
     return
 
-def binary_search():
+def binary_search(array, n, start, end):
     '''
     Implement a binary search algorithm
+
+    Parameters:
+    :param Array array: the array to be searched
+    :param int n: The value to be searched for
+    :param int start: The beginning index of the partition
+    :param int end: The index of the end of the partition    
     '''
     return
 
