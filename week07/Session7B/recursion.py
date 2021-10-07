@@ -19,13 +19,13 @@ def fibonacci(n):
     return fibonacci(n-1) + fibonacci(n-2)
 
 
-def add_to_previous(start, depth):
+def add_to_previous(current, depth):
     '''
     Implement a function that continues to add it's previous value until the specified depth is reached.
     Return the value at depth
 
     Parameters:
-    :param int start: starting number
+    :param int current: current number
     :param int depth: when to end
 
     :return int
