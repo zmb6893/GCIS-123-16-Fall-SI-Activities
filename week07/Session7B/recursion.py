@@ -9,6 +9,7 @@ def fibonacci(n):
     '''
     Example from the recursion box
     '''
+    # Make sure no terms less than 0
     if (n == 0):
         return 0
     if n == 1 or n == 2:
@@ -63,7 +64,7 @@ def binary_search(array, n, start, end):
 
 
 def main():
-    print(fibonacci(3))
+    print(fibonacci(4))
 
 if __name__ == "__main__":
     main()
