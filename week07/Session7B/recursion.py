@@ -41,13 +41,29 @@ def draw_tree_branch(size, depth):
 
     return
 
-def draw_flower(size, depth):
+def draw_flower(size, depth, petals=3):
     '''
     Use turtle to draw a flower recursively
 
     Parameters:
     :param int size: the scalar of the flower size
     '''
+    if petals == 3:
+        return 3
+
+    t.fillcolor("yellow")
+    t.fillcolor("black")
+
+    t.setposition(0,0)
+    length=size*20
+
+    t.circle(length,180)
+
+    for i in range(petals):
+        t.circle(length, 180)
+        t.right(360/petals)
+
+
     return
 
 def binary_search(array, n, start, end):
@@ -60,11 +76,20 @@ def binary_search(array, n, start, end):
     :param int start: The beginning index of the partition
     :param int end: The index of the end of the partition    
     '''
-    return
+    # base cases
+    if n == 0:
+        return 0
+    
+    if n == 1:
+        return 1
+    else:
+
+        return 
 
 
 def main():
-    print(fibonacci(4))
+    draw_flower(1, 10)
+    input("enter")
 
 if __name__ == "__main__":
     main()
