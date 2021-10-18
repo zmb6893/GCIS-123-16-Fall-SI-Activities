@@ -6,27 +6,27 @@ def hello():
     print("hello")
     print("goodbye")
 
-def for_loop():
+def for_loop(n=3):
     # What is my time complexity?
-    for n in range(3):
+    for _ in range(n):
         print("hello")
         print("goodbye")
 
-def two_for_loop():
+def two_for_loop(n=3):
     # What is my time complexity?
-    for n in range(3):
+    for _ in range(n):
         print("hey")
-    for n in range(3):
+    for _ in range(n):
         print("bye")
 
-def nested_for_loop():
+def nested_for_loop(n=3):
     # What is my time complexity?
-    for n in range(3):
+    for _ in range(n):
         print("hello")
-        for i in range(3):
+        for _ in range(n):
             print("hello")
         print("goodbye")
-        for i in range(3):
+        for _ in range(n):
             print("goodbye")
 
 def recurse(iteration = 3):
