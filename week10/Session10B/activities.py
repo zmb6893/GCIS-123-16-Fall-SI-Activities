@@ -90,6 +90,10 @@ def main():
     print(find_card_in_list("Queen of Hearts", deck_list))
     print(split_deck(deck_list, 3))
 
+    # make the split_deck results into sets
+
+    # look for subsets and supersets from the deck_set and the sections of split_deck
+
 
 if __name__ == "__main__":
     main()
