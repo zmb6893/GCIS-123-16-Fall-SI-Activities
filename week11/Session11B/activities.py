@@ -7,6 +7,9 @@ Session 11B: Classes
 # Make a course class that holds the state for course_name, course_number, and number_of_students
 # Once you have completed the above step, add a state for courses to the person class
 
+# Make a class for a favorite hobby that has fields for hobby_name and description
+# Once you've have completed this step, add a state for favorite hobby to the person class
+
 def main():
     # instantiate the person class with your name, age, and mood
 
@@ -18,6 +21,7 @@ def main():
 
     # are there any other courses you know the information for? instantiate it.
 
+    # Create some hobbies and assign people the hobbies
     pass
 
 if __name__ == "__main__":
