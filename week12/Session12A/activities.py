@@ -18,8 +18,8 @@ class Person:
 # Make a course class that holds the state for course_name, course_number, and number_of_students
 # Once you have completed the above step, add a state for courses to the person class
 class Course:
-    course_name = "name"
-    course_number = 0
+    course_id = "ABC-123"
+    professor = "Professor Name"
     number_of_students = 0
 
     # Refactor the code so that the person class only accepts use of the variables defined above.
@@ -55,13 +55,13 @@ def main():
     John.name = "John"
     John.age = 25
     John.mood = "Happy"
-    John.courses.append(gcis.course_name + "-" + gcis.course_number)
+    John.courses.append(gcis.course_id)
 
     AJ = Person()
     AJ.name = "AJ"
     AJ.age = -4
     AJ.mood = "DEPRESSED"
-    AJ.courses.append(gcis.course_name + "-" + gcis.course_number)
+    AJ.courses.append(gcis.course_id)
 
     Zoe = Person()
     Zoe.name = "Zoe"
@@ -98,6 +98,11 @@ def main():
     print("\t%s's favorite hobby is %s: %s\n"%(Zoe.name, Zoe.favoriteHobby.hobby_name, Zoe.favoriteHobby.description))
 
     # are there any other courses you know the information for? instantiate it.
+
+    # Make a dictionary of courses accessed by the course id.
+
+    # Prompt the user for a course id and search the dictionary for the course. Print out the name
+    # of the course, the professor, and the number of students in the class
 
     pass
 
