@@ -2,6 +2,21 @@
 Session 12A: Classes and constructors
 """
 
+# TODO: Create a method to return a formatted string for a FavoriteHobby.
+# you will be using this in the next step
+
+# TODO: Create a method that prints the information for a person.
+# use this for printing output instead of the prints in main.
+
+# TODO: Refactor all the classes to use private fields and create accessors
+# accordingly.
+
+# TODO: Add some accessors to the clsses
+
+# TODO: Come up with some things that a person might do. Example: wake up,
+# excercise, attend class, sleep, eat ...
+# Make methods in the person class for a few of these.
+
 # Make a person class that holds the state for a name, age, and mood
 class Person:
     # Refactor the code so that the person class only accepts use of the variables defined above.
@@ -13,6 +28,8 @@ class Person:
         self.age = age
         self.mood = mood
         self.courses = []
+
+    
 
 
 # Make a course class that holds the state for course_name, course_number, and number_of_students
