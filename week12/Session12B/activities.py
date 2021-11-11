@@ -2,9 +2,6 @@
 Session 12A: Classes and constructors
 """
 
-# TODO: Create a method to return a formatted string for a FavoriteHobby.
-# you will be using this in the next step
-
 # TODO: Create a method that prints the information for a person.
 # use this for printing output instead of the prints in main.
 
@@ -20,17 +17,32 @@ Session 12A: Classes and constructors
 # Make a person class that holds the state for a name, age, and mood
 class Person:
     # Refactor the code so that the person class only accepts use of the variables defined above.
-    __slots__ = ['name', 'age', 'mood', 'favoriteHobby', 'courses']
+    __slots__ = ['__name', '__age', '__mood', '__favoriteHobby', '__courses']
 
     # Make a constructor for this class
     def __init__(self, name, age, mood):
-        self.name = name
-        self.age = age
-        self.mood = mood
-        self.courses = []
+        self.__name = name
+        self.__age = age
+        self.__mood = mood
+        self.__courses = []
 
-    
+    # accessors :(
+    def get_name(self):
+        return self.__name
 
+    def get_age(self):
+        return self.__age
+
+    def get_mood(self):
+        return self.__mood
+
+    def get_courses(self):
+        return self.__courses
+
+    # make a method for waking up
+    def wake_up(self, time):
+        "John woke up at 3:00AM"
+        print(self.__name + " woke up at " + time)
 
 # Make a course class that holds the state for course_name, course_number, and number_of_students
 # Once you have completed the above step, add a state for courses to the person class
@@ -55,8 +67,24 @@ class FavoriteHobby:
         self.hobby_name = hobby_name
         self.description = description
 
+    def print_hobby(self):
+        """
+        We want to print a hobby
+        """
+        print(self.hobby_name + ": " + self.description)
+
+    def to_string(self):
+        return self.hobby_name + ": " + self.description
+
 def main():
-    # instantiate a person class with default values
+    volleyBall = FavoriteHobby("Volley Ball", "A game where a team of players hit a ball over a net.")
+
+    volleyBall.print_hobby()
+
+    person = Person("Person", 0, "tired")
+    person.wake_up("8:00AM")
+    print(volleyBall.to_string())
+    """# instantiate a person class with default values
     person = Person("Person", 0, "tired")
     volleyBall = FavoriteHobby("Volley Ball", "A game where a team of players hit a ball over a net.")
     gcis = Course("GCIS-123-16", "Thomas Maszerowski", 30)
@@ -89,6 +117,9 @@ def main():
                 %(course.course_id, course.professor, course.number_of_students))
 
         # find the course from the inputted course_id
+        
+
+        # print out volley ball"""
         
 
 if __name__ == "__main__":
