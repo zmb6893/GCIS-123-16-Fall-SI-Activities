@@ -40,7 +40,7 @@ def dictionaries_and_sets():
 
 def classes():
     """
-    Practice using classes.
+    Practice using classes. Do the activities from the review document.
     """
     pass
 
