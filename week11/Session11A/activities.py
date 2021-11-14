@@ -51,14 +51,22 @@ def chess_hash(piece):
     return ord(piece[0])
 
 def main():
-    dictionary = make_chess_pieces("chess.csv")
+    """dictionary = make_chess_pieces("chess.csv")
     print(board:=place_pieces_on_board(dictionary))
 
     for row in range(0,7):
         for col in range(0,7):
             print("%s\t"%(board[row][col]))
-        print("\n")
+        print("\n")"""
+
+    numbers = dict()
+    numbers= {1:"one", 2:"two", 3:"three", 4:"four", 5:"five"}
+    print(numbers)
+    print(numbers[1])
+    if(1 in numbers):
+        print("one is in numbers")
     pass
 
 if __name__ == "__main__":
     main()
+
