@@ -2,6 +2,8 @@
 Practicum Review
 """
 
+from random import randint
+
 def make_tuple(a,b,c):
     """
     Returns a tuple containing all three parameters.
@@ -36,71 +38,119 @@ def odds_before_evens(a_list):
     """
     Rearrange the elements in the list so that all of the odd values come before the even values. Otherwise, the values should remain in the same relative order.Do not return a value - modify the list inplace
     """
-    pass
+    odds = []
+    evens = []
+    for value in a_list:
+        if value % 2 == 0:
+            evens.append(value)
+        else:
+            odds.append(value)
+
+    a_list = odds + evens
 
 def bisect(a_list):
     """
     Returns the list bisected into two halves. If the list has an odd number of elements, do not include the middle element in either half.
     """
-    pass
+    list1 = list()
+    list2 = list()
+    mid = len(a_list)//2
+
+    if len(a_list) % 2 == 0:
+        list1 = a_list[0:mid:1]
+        list2 = a_list[mid:len(a_list):1]
+    else:
+        list1 = a_list[0:mid:1]
+        list2 = a_list[mid+1:len(a_list):1]
+
+    return list1, list2
 
 def equivalent(a, b):
     """
     Return True if the sequences contain all of the same values, even if they are in a different order, and False otherwise
     """
-    pass
+    if(set(a) == set(b)):
+        return True
+    return False
 
 class Domino:
     """
     Create a Python class to represent a domino. Be sure to include slots and a constructor. 
     """
-    def __init__(self):
+    __slots__ = ["__a", "__b"]
+    def __init__(self, a, b):
         """
         It's a constructor my man
         """
-        pass
+        self.__a = a
+        self.__b = b
+    
+    def get_a(self):
+        return self.__a
 
+    def get_b(self):
+        return self.__b
+
+    def __str__(self):
+        return "[%d|%d]"%(self.__a,self.__b)
+
+    def __eq__(self, o):
+        if type(o) == type(self):
+            if o.get_a() == self.get_a() and o.get_b() == self.get_b():
+                return True
+        return False
+        
 def domino_to_string(domino):
     """
     Turns a domino into a string
     """
-    pass
+    return str(domino)
 
 def is_match(dom1,dom2):
     """
     Return True if the dominos have the same number of pips at either end, and False otherwise.
     """
-    pass
+    return dom1 == dom2
 
 def list_range(m,n):
     """
     Uses list comprehension to return the list containing all of the values from m to n-1
     """
-    pass
+    return [i for i in range(m,n-1)]
 
 def multiples(sequence, n):
     """
     Use list comprehension to create a list that has all of the values from the sequence that are evenly divisible by n
     """
-    pass
+    return [value for value in sequence if(value%n == 0) ]
 
 def only_vowels(a_string):
     """
     Use list comprehension to return a list containing only the vowels in the string. Your function should run in O(n) where n is the length of the string.
     """
-    pass
+    vowels = {'a','e','i','o','u'}
+    return [letter for letter in a_string if(letter in vowels)]
 
 def random_count(n):
     """
     Return the number of times the random.randint function must be called before all of the values from 0 to n are generated randomly
     """
-    pass
+    numbers = [i for i in range(n)]
+    required = set(numbers)
+    count = 0
+ 
+    current = set()
+    while(current != required):
+        current.add(randint(0,n-1))
+        count += 1
+
+    return count
 
 def disjoint(a,b):
     """
     Returns True if the sets are disjoint and False otherwise
     """
-    pass
+    return a.isdisjoint(b)
 
 def random_counts(n):
     """
@@ -110,7 +160,7 @@ def random_counts(n):
 
 def frequencies(counts):
     """
-    Print each count andits frequency in sorted order.
+    Print each count and its frequency in sorted order.
     """
     pass
 
@@ -148,47 +198,73 @@ def main():
     a = [1,2,3]
     b = ["a","b","c"]
     format_string(a)
-    format_string(splice(a,b))
+    splice(a,b)
+    format_string(a)
     print()
     
     # Call your odds_before_evens function and print before and after
     print("Activity 6:")
+    a_list = [1,2,3,4,5,6,7]
+    format_string(a_list)
+    odds_before_evens(a_list)
+    format_string(a_list)
     print()
 
     # Call the bisect function and print the results
     print("Activity 7:")
+    format_string(bisect([1,2,3,4,5,6]))
+    format_string(bisect([1,2,3,4,5,6,7]))
     print()
 
     # Call equivalent and print the results
     print("Activity 8:")
+    a = "hello"
+    b = "elloh"
+    format_string(equivalent(a,b))
+    a = "hllo"
+    b = "elloh"
+    format_string(equivalent(a,b))
     print()
 
     # Call domino_to_string on two different dominos
     print("Activity 9:")
+    d1 = Domino(1,5)
+    d2 = Domino(3,6)
+    d3 = Domino(1,5)
+    format_string(domino_to_string(d1))
+    format_string(domino_to_string(d2))
     print()
     
     # Call is match on a few dominos
     print("Activity 10:")
+    format_string(is_match(d1,d2))
+    format_string(is_match(d1,d3))
     print()
 
     # Call list_range and print
     print("Activity 11:")
+    format_string(list_range(0,13))
     print()
 
     # Call multiples on a sequence
     print("Activity 13:")
+    format_string(multiples([1,2,3,4,5,6,7,8,9],3))
     print()
 
     # Call only_vowels 
     print("Activity 14:")
+    format_string(only_vowels("oiuhjkjsdkfo"))
     print()
 
     # Call random_count
     print("Activity 15:")
+    format_string(random_count(5))
     print()
 
     # Call disjoint
     print("Activity 16:")
+    format_string(disjoint({1,2,3},{3,2,1}))
+    format_string(disjoint({1,2,3},{4,5,6}))
     print()
 
     # Use the dictionary in your main function to determine the total number of times random.randint was called, the maximum number of times that any value was generated, and the sorted list of values that were generated the maximum number of times. 
