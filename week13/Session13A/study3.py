@@ -54,17 +54,23 @@ class Domino:
     """
     Create a Python class to represent a domino. Be sure to include slots and a constructor. 
     """
+    __slots__ = ["__a","__b"]
     def __init__(self,a,b):
         """
-        It's a constructor my man
+        It's a constructor my man [a|b]
         """
-        pass
+        self.__a = a
+        self.__b = b
+        
+    def __str__(self):
+        return "[%d|%d]"%(self.__a,self.__b)
+        
 
 def domino_to_string(domino):
     """
     Turns a domino into a string
     """
-    pass
+    return str(domino)
 
 def is_match(dom1,dom2):
     """
