@@ -16,7 +16,7 @@ class Plate:
 def main():
     #TODO: Make 3 plates and add them to a queue.
     #TODO: Create five pancakes
-    #TODO: Add the pancakes to a stack of pancakes. Make sure to add a plate first
+    #TODO: Make yourself a plate of pancakes. Don't forget the plate!
     #TODO: Peek to see what the top pancake's toppings are
     #TODO: Eat the top pancake by popping from the pancake stack
     #TODO: Add two more pancakes to the stack.
